@@ -1,3 +1,5 @@
+// exporta modelo de datos de usuario
+
 const mongoose = require("mongoose")
 const userSquema = mongoose.Schema({
     name : {
