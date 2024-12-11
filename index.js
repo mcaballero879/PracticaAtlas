@@ -3,7 +3,6 @@ const mongoose = require("mongoose")
 require("dotenv").config()
 const userRoutes = require ("./routes/users.js")
 
-
 const app = express()
 const port = process.env.PORT || 3000
 
@@ -11,14 +10,14 @@ const port = process.env.PORT || 3000
 app.use(express.json())
 app.use('/api',userRoutes)
 
-
-
-
 // rutas 
 app.get("/",(req, res) =>{
     res.send("wellcome API")
 })
 
+app.post("/posteo",(req, res) =>{ // ruta agregada para probar 
+    res.send("wellcome API de post")
+})
 // mongodb conection
 
 mongoose
